@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    background-color: #f4f6f9;
+    color: #2c2c2c;
+    margin: 20px;
+}
+
+body > fieldset {
+    border: 2px solid #0f3460;
+    border-radius: 12px;
+    padding: 25px;
+    background-color: #fdfdfd;
+}
+
+fieldset fieldset {
+    border: 1.5px solid #c8d0de;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+legend {
+    font-weight: 700;
+    font-size: 14px;
+    color: #0f3460;
+    padding: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+table.nav {
+    background-color: #0f3460;
+    border: none !important;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.nav td {
+    text-align: center;
+    padding: 12px;
+    border: none !important; 
+}
+
+table.nav td a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+table.nav td a:hover {
+    color: #f9c84a;
+    text-decoration: none; 
+}
+
+p strong + br + p, 
+p:has(strong) + p { 
+    background-color: #f0f4f8;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #445566;
+    border-left: 4px solid #0f3460;
+    line-height: 1.8;
+}
+
+figure {
+    margin: 15px 0;
+    text-align: center;
+}
+
+figure img {
+    border: 1px solid #e0e6ed;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+}
+
+figcaption {
+    font-size: 12px;
+    color: #778899;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: #1a6fc4;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #16213e;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+footer a {
+    color: #f9c84a;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List | Task 1</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f4f4f4; }
+        .container { background: white; padding: 20px; border-radius: 8px; max-width: 400px; margin: auto; }
+        .completed { text-decoration: line-through; color: gray; }
+        li { margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
+        .task-text { cursor: pointer; flex-grow: 1; }
+        button { margin-left: 5px; cursor: pointer; }
+        .error { color: red; font-size: 12px; display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>My To-Do List</h3>
+        <input type="text" id="taskInput" placeholder="Enter task name...">
+        <button onclick="addTask()">Add Task</button>
+        <p id="errorMsg" class="error">Task name cannot be empty!</p>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        function addTask() {
+            const input = document.getElementById('taskInput');
+            const error = document.getElementById('errorMsg');
+            const list = document.getElementById('taskList');
+            const val = input.value.trim();
+
+            error.style.display = "none";
+
+            // Validation
+            if (!val) {
+                error.style.display = "block";
+                return;
+            }
+
+            // Challenge: Duplicate Check
+            const existingTasks = [...document.querySelectorAll('.task-text')].map(t => t.innerText.toLowerCase());
+            if (existingTasks.includes(val.toLowerCase())) {
+                alert("This task already exists!");
+                return;
+            }
+
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span class="task-text" onclick="toggleTask(this)">${val}</span>
+                <div>
+                    <button onclick="editTask(this)">Edit</button>
+                    <button onclick="this.parentElement.parentElement.remove()">Delete</button>
+                </div>
+            `;
+            list.appendChild(li);
+            input.value = "";
+        }
+
+        function toggleTask(el) {
+            el.classList.toggle('completed');
+        }
+
+        function editTask(btn) {
+            const span = btn.parentElement.parentElement.querySelector('.task-text');
+            const newText = prompt("Edit your task:", span.innerText);
+            if (newText && newText.trim() !== "") {
+                span.innerText = newText.trim();
+            }
+        }
+    </script>
+</body>
+</html>

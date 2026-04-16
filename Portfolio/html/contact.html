@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mithila Farzana | Contact Me</title>
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+
+<body>    
+    <fieldset>
+        <legend><strong>Navigation</strong></legend>
+        <table class="nav" border="1" width="100%" cellspacing="0" cellpadding="8">
+            <tr>
+                <td><a href="../index.html">Home</a></td>
+                <td><a href="educations.html">Education</a></td>
+                <td><a href="experience.html">Experience</a></td>
+                <td><a href="projects.html">Projects</a></td>
+                <td><a href="contact.html"><strong>Contact</strong></a></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <br>
+
+    <form method="get" action="">
+        <fieldset>
+            <legend><strong>Contact Form</strong></legend>
+
+            <table border="1" width="100%" cellspacing="0" cellpadding="8">
+
+                <tr>
+                    <th align="left" width="25%"><label for="firstName">First Name<sup>*</sup></label></th>
+                    <td><input type="text" id="firstName" name="firstName" required></td>
+                </tr>
+
+                <tr>
+                    <th align="left"><label for="lastName">Last Name<sup>*</sup></label></th>
+                    <td><input type="text" id="lastName" name="lastName" required></td>
+                </tr>
+
+                <tr>
+                    <th align="left">Gender<sup>*</sup></th>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th align="left"><label for="email">Email<sup>*</sup></label></th>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+
+                <tr>
+                    <th align="left"><label for="company">Company</label></th>
+                    <td><input type="text" id="company" name="company"></td>
+                </tr>
+
+                <tr>
+                    <th align="left">Reason of Contact<sup>*</sup></th>
+                    <td>
+                        <input type="radio" id="reasonProjects" name="reason" value="projects" required>
+                        <label for="reasonProjects">Projects</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" id="reasonThesis" name="reason" value="thesis" required>
+                        <label for="reasonThesis">Thesis</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" id="reasonJob" name="reason" value="job" required>
+                        <label for="reasonJob">Job</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th align="left">Topics<sup>*</sup></th>
+                    <td>
+                        <input type="checkbox" id="topicWeb" name="topics[]" value="web">
+                        <label for="topicWeb">Web Development</label>
+                        <br>
+                        <input type="checkbox" id="topicMobile" name="topics[]" value="mobile">
+                        <label for="topicMobile">Mobile Development</label>
+                        <br>
+                        <input type="checkbox" id="topicAI" name="topics[]" value="ai">
+                        <label for="topicAI">AI/ML Development</label>
+                        <p><em>Note:</em> Select at least one topic before submitting</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th align="left"><label for="date">Consultation Date<sup>*</sup></label></th>
+                    <td><input type="date" id="date" name="consultationDate" required></td>
+                </tr>
+
+                <tr>
+                    <th align="left"><label for="message">Message</label></th>
+                    <td><textarea id="message" name="message" rows="4" cols="40" placeholder="Write your message..."></textarea></td>
+                </tr>
+
+                <tr>
+                    <th></th>
+                    <td>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+    </form>
+
+    <p>
+        <a href="../index.html">Back to Home</a>
+    </p>
+    <footer>
+    <p>
+        &copy; 2026 Mithila Farzana
+        &#9993;<a href="mailto:mithila260@gmail.com"> <em>mithila260@gmail.com</em></a> 
+        &phone; +8801705577034
+    </p>
+    </footer>
+
+</body>
+</html>

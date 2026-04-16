@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mithila Farzana | Projects</title>
+    <link rel="stylesheet" href="../css/projects.css"
+</head>
+
+<body>
+
+    <fieldset>
+        <legend><strong>Navigation</strong></legend>
+        <table class="nav" border="1" width="100%" cellspacing="0" cellpadding="8">
+            <tr>
+                <td><a href="../index.html">Home</a></td>
+                <td><a href="educations.html">Education</a></td>
+                <td><a href="experience.html">Experience</a></td>
+                <td><a href="projects.html"><strong>Projects</strong></a></td>
+                <td><a href="contact.html">Contact</a></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend><strong>Projects</strong></legend>
+
+        <!-- PROJECT 1 -->
+        <fieldset>
+            <legend><strong>Dance Academy Database</strong> (University-Database)</legend>
+
+            <p>
+                Oracle SQL database designed to manage instructors (choreographers), lessons, and performance schedules,
+                using primary/foreign keys and a junction table to model relationships.
+            </p>
+
+            <p><strong>What I did</strong></p>
+            <ul>
+                <li>Brainstormed the domain and translated requirements into a relational schema.</li>
+                <li>Designed an ERD and converted it into normalized tables (entities + attributes).</li>
+                <li>Implemented the schema in Oracle SQL using <code>CREATE TABLE</code>, primary keys, and foreign keys.</li>
+                <li>Modeled relationships using a junction table (LS) to map lessons and choreographers.</li>
+                <li>Inserted sample data and verified integrity by running <code>SELECT</code> queries in Oracle APEX.</li>
+                <li>Organized scripts into separate SQL files (schema / data / queries) and published to GitHub.</li>
+            </ul>
+
+            <p><strong>Skills / Tools</strong></p>
+            <p>
+                Oracle SQL &nbsp;•&nbsp; Oracle APEX &nbsp;•&nbsp; Data Modeling &nbsp;•&nbsp; ERD Design &nbsp;•&nbsp;
+                Relational Database Design &nbsp;•&nbsp; DDL (CREATE / ALTER) &nbsp;•&nbsp; Primary &amp; Foreign Keys &nbsp;•&nbsp;
+                Junction Table (Many-to-Many) &nbsp;•&nbsp; SQL Queries (SELECT) &nbsp;•&nbsp; Normalization
+            </p>
+
+            <p><strong>GitHub</strong></p>
+            <p>
+                <a href="https://github.com/MithilaFarzana99/SQL-oracle-DanceAcademy-DB-aiub" target="_blank" rel="noopener noreferrer">
+                    SQL-oracle-DanceAcademy-DB-aiub
+                </a>
+            </p>
+
+            <p><strong>Screenshots</strong></p>
+
+            <table border="0" width="100%" cellspacing="0" cellpadding="8">
+                <tr>
+                    <td width="50%" valign="top">
+                        <figure>
+                            <img src="../icons/ss/p1.png" alt="Choreographers table creation" width="400" />
+                            <figcaption>Choreographers table (schema definition / DDL)</figcaption>
+                        </figure>
+                    </td>
+                    <td width="50%" valign="top">
+                        <figure>
+                            <img src="../icons/ss/p3.png" alt="Lessons table creation" width="400" />
+                            <figcaption>Lessons table with foreign key reference (DDL)</figcaption>
+                        </figure>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%" valign="top">
+                        <figure>
+                            <img src="../icons/ss/p4.png" alt="LS junction table" width="400" />
+                            <figcaption>LS junction table + foreign key (relationship modeling)</figcaption>
+                        </figure>
+                    </td>
+                    <td width="50%" valign="top">
+                        <figure>
+                            <img src="../icons/ss/p6.png" alt="Showperformance table creation" width="400" />
+                            <figcaption>Showperformance table (schema definition / DDL)</figcaption>
+                        </figure>
+                    </td>
+                </tr>
+            </table>
+
+        </fieldset>
+
+        <br>
+
+        <!-- PROJECT 2 -->
+        <fieldset>
+            <legend><strong>PetShop Management System</strong> (University—Java OOP)</legend>
+
+            <p>
+                Console-based pet shop management system built in Java to practice OOP principles (inheritance, interfaces, encapsulation)
+                and file I/O for maintaining a simple transaction history.
+            </p>
+
+            <p><strong>What I did</strong></p>
+            <ul>
+                <li>Designed an OOP model with a base <code>Pet</code> class and derived <code>Cat</code> / <code>Dog</code> classes (inheritance).</li>
+                <li>Implemented interfaces (<code>PetOperations</code>, <code>PetShopOperations</code>) to define required operations and keep the design consistent.</li>
+                <li>Built a <code>PetShop</code> manager to add, remove, search, and display pets (collection management).</li>
+                <li>Created buy/sell style workflows with validation (quantity updates, basic checks).</li>
+                <li>Added file I/O using <code>FileReadWriteDemo</code> to write/read a history log (<code>History.txt</code>).</li>
+                <li>Created a menu-driven entry point in <code>Start.java</code> to run the system from the terminal.</li>
+            </ul>
+
+            <p><strong>Skills / Tools</strong></p>
+            <p>
+                Java &nbsp;•&nbsp; OOP &nbsp;•&nbsp; Inheritance &nbsp;•&nbsp; Interfaces &nbsp;•&nbsp; Encapsulation &nbsp;•&nbsp;
+                File I/O &nbsp;•&nbsp; Console application design &nbsp;•&nbsp; Debugging
+            </p>
+
+            <p><strong>GitHub</strong></p>
+            <p>
+                <a href="https://github.com/MithilaFarzana99/aiub-oop-petshop" target="_blank" rel="noopener noreferrer">
+                    aiub-oop-petshop
+                </a>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <!-- PROJECT 3 -->
+        <fieldset>
+            <legend><strong>AI Coding Quality &amp; Refactoring (C++)</strong> (Work-Practice Repo)</legend>
+
+            <p>
+                A public C++ solutions repository focused on correctness, edge-case handling, and refactoring. The code demonstrates
+                structured problem-solving with validation, clean logic, and test-case driven checks.
+            </p>
+
+            <p><strong>What I did</strong></p>
+            <ul>
+                <li>Implemented spec-driven solutions in C++ using STL containers and clean class/function design.</li>
+                <li>Added strong input validation and error handling (exceptions) for invalid or edge-case inputs.</li>
+                <li>Used test cases with <code>assert</code> and exception tests to verify correctness consistently.</li>
+                <li>Refactored logic for readability and maintainability (helper functions, clear separation of responsibilities).</li>
+                <li>Optimized performance where needed using appropriate data structures and algorithmic reasoning.</li>
+            </ul>
+
+            <p><strong>Skills / Tools</strong></p>
+            <p>
+                C++ &nbsp;•&nbsp; OOP Design &nbsp;•&nbsp; Debugging &nbsp;•&nbsp; Refactoring &nbsp;•&nbsp;
+                Test-case Design (assert) &nbsp;•&nbsp; Exception Handling &nbsp;•&nbsp; Edge-case Analysis &nbsp;•&nbsp;
+                Performance Awareness
+            </p>
+
+            <p><strong>GitHub</strong></p>
+            <p>
+                <a href="https://github.com/MithilaFarzana99/WorkCpp" target="_blank" rel="noopener noreferrer">
+                    WorkCpp
+                </a>
+            </p>
+        </fieldset>
+    </fieldset>
+    <footer>
+    <p>
+        &copy; 2026 Mithila Farzana
+        &#9993;<a href="mailto:mithila260@gmail.com"> <em>mithila260@gmail.com</em></a> 
+        &phone; +8801705577034
+    </p>
+    </footer>
+
+</body>
+
+</html>

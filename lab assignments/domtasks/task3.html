@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Card Editor | Task 3</title>
+    <style>
+        body { display: flex; gap: 50px; font-family: sans-serif; padding: 40px; }
+        #profileCard { 
+            width: 300px; padding: 20px; border: 2px solid #333; border-radius: 15px;
+            background-color: #fff; transition: 0.3s;
+        }
+        .controls { width: 300px; }
+        .hobby-item { display: flex; justify-content: space-between; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+
+    <div id="profileCard">
+        <h2 id="dispName">Mithila Farzana</h2>
+        <p id="dispBio">CSE Student at AIUB.</p>
+        <p>Contact: <span id="dispContact">mithila@example.com</span></p>
+        <h4>Hobbies:</h4>
+        <ul id="hobbyList"></ul>
+    </div>
+
+    <div class="controls">
+        <h3>Edit Profile</h3>
+        <input type="text" id="editName" placeholder="Name"><br>
+        <textarea id="editBio" placeholder="Bio"></textarea><br>
+        <input type="text" id="editContact" placeholder="Contact"><br>
+        <button onclick="updateProfile()">Update Info</button>
+        <hr>
+        <input type="text" id="hobbyInput" placeholder="Add Hobby">
+        <button onclick="addHobby()">Add</button>
+        <hr>
+        <button onclick="changeStyle('backgroundColor', 'lightblue')">Blue BG</button>
+        <button onclick="changeStyle('color', 'red')">Red Text</button>
+        <button onclick="changeStyle('fontSize', '20px')">Large Font</button>
+        <br><br>
+        <button onclick="resetProfile()" style="background: #ffcdd2;">Reset Card</button>
+    </div>
+
+    <script>
+        const defaults = {
+            name: "Mithila Farzana",
+            bio: "CSE Student at AIUB.",
+            contact: "mithila@example.com",
+            bg: "#ffffff",
+            color: "#000000",
+            font: "16px"
+        };
+
+        function updateProfile() {
+            const n = document.getElementById('editName').value;
+            const b = document.getElementById('editBio').value;
+            const c = document.getElementById('editContact').value;
+
+            if (!n || !b) { alert("Name and Bio cannot be empty!"); return; }
+
+            document.getElementById('dispName').innerText = n;
+            document.getElementById('dispBio').innerText = b;
+            document.getElementById('dispContact').innerText = c;
+        }
+
+        function addHobby() {
+            const h = document.getElementById('hobbyInput').value;
+            if (!h) return;
+            const li = document.createElement('li');
+            li.className = "hobby-item";
+            li.innerHTML = `${h} <button onclick="this.parentElement.remove()">x</button>`;
+            document.getElementById('hobbyList').appendChild(li);
+            document.getElementById('hobbyInput').value = "";
+        }
+
+        function changeStyle(prop, val) {
+            document.getElementById('profileCard').style[prop] = val;
+        }
+
+        function resetProfile() {
+            const card = document.getElementById('profileCard');
+            document.getElementById('dispName').innerText = defaults.name;
+            document.getElementById('dispBio').innerText = defaults.bio;
+            document.getElementById('dispContact').innerText = defaults.contact;
+            document.getElementById('hobbyList').innerHTML = "";
+            card.style.backgroundColor = defaults.bg;
+            card.style.color = defaults.color;
+            card.style.fontSize = defaults.font;
+        }
+    </script>
+</body>
+</html>

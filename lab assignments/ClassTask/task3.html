@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Problem 3: Community Membership Check</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Community Membership</h1>
+        <div class="form-group">
+            <label for="age">Enter Your Age:</label>
+            <input 
+                type="number" 
+                id="age" 
+                placeholder="Type your age..."
+            />
+        </div>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        const ageInput = document.getElementById('age');
+        const messageDiv = document.getElementById('message');
+
+        ageInput.addEventListener('input', () => {
+            const age = parseInt(ageInput.value);
+
+            messageDiv.classList.remove('show', 'age-below-40', 'age-40-50', 'age-above-50');
+
+            if (ageInput.value === '' || isNaN(age)) {
+                return;
+            }
+
+            messageDiv.classList.add('show');
+
+            if (age < 40) {
+                messageDiv.textContent = 'To be a part of the community, you need to at least 40';
+                messageDiv.classList.add('age-below-40');
+            } else if (age >= 40 && age <= 50) {
+                messageDiv.textContent = 'You are the youngsters of this community';
+                messageDiv.classList.add('age-40-50');
+            } else {
+                messageDiv.innerHTML = '<span class="red-text">Top level members of the group</span>';
+                messageDiv.classList.add('age-above-50');
+            }
+        });
+    </script>
+</body>
+</html>

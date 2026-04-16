@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Problem 2: Username Auto-Uppercase</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Username Auto-Uppercase</h1>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input 
+                type="text" 
+                id="username" 
+                placeholder="Type here..."
+            />
+        </div>
+        <div class="info">
+            💡 As you type, the text automatically converts to uppercase!
+        </div>
+    </div>
+
+    <script>
+        const usernameInput = document.getElementById('username');
+
+        usernameInput.addEventListener('input', () => {
+            usernameInput.value = usernameInput.value.toUpperCase();
+        });
+    </script>
+</body>
+</html>

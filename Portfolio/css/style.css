@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    background-color: #f4f6f9;
+    color: #2c2c2c;
+}
+
+fieldset {
+    border: 1.5px solid #c8d0de;
+    border-radius: 6px;
+    padding: 10px 14px;
+    background-color: #ffffff;
+    margin-bottom: 2px;
+}
+
+legend {
+    font-weight: 600;
+    font-size: 13px;
+    color: #0f3460;
+    padding: 0 6px;
+}
+
+table.nav {
+    background-color: #0f3460;
+    border: none !important;
+    border-collapse: collapse;
+    width: 100%; 
+}
+
+table.nav td {
+    text-align: center;
+    padding: 12px;
+    border: none !important; 
+}
+
+table.nav td a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+table.nav td a:hover {
+    color: #f9c84a;
+    text-decoration: none; 
+}
+
+table[border="2"] > tbody > tr > td {
+    background-color: #ffffff;
+    padding: 14px;
+    vertical-align: top;
+}
+
+.profile-img {
+    border-radius: 50%;
+    border: 3px solid #0f3460;
+    display: block;
+    margin: 0 auto 10px;
+    object-fit: cover;
+}
+
+fieldset h2 {
+    font-size: 18px;
+    color: #0f3460;
+    margin: 10px 0 6px;
+}
+
+fieldset table[border="0"] td a {
+    color: #1a6fc4;
+    text-decoration: none;
+}
+
+table[border="1"] td, table[border="1"] th {
+    border: 1px solid #c8d0de !important;
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+table[border="1"] th[align="left"] {
+    background-color: #0f3460;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+table[cellspacing="5"] th {
+    background-color: #16213e;
+    color: #e0eaff;
+    font-size: 13px;
+    padding: 9px 12px;
+}
+
+table[cellspacing="5"] td {
+    vertical-align: top;
+    background-color: #f9fbff;
+    padding: 10px 14px;
+}
+
+a { color: #1a6fc4; text-decoration: none; }
+a:hover { text-decoration: underline; color: #0f3460; }
+
+footer {
+    color: #aabbd4;
+    background-color: #16213e;
+    text-align: center;
+    padding: 14px 20px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+footer a { color: #f9c84a; }

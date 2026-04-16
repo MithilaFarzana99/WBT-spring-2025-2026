@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration | Task 2</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .val-error { color: red; font-size: 11px; display: none; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        tr:hover { background-color: #f1f1f1; }
+        .highlight-it { background-color: #e3f2fd; }
+        .senior-student { color: darkblue; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h3>Student Registration</h3>
+    <form id="studentForm">
+        <div class="form-group">
+            Name: <input type="text" id="sName">
+            <div id="errName" class="val-error">Name is required</div>
+        </div>
+        <div class="form-group">
+            Age: <input type="number" id="sAge">
+            <div id="errAge" class="val-error">Age must be a number</div>
+        </div>
+        <div class="form-group">
+            Course: 
+            <select id="sCourse">
+                <option value="">--Select--</option>
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="BBA">BBA</option>
+            </select>
+            <div id="errCourse" class="val-error">Please select a course</div>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+
+    <table id="studentTable">
+        <thead>
+            <tr><th>Name</th><th>Age</th><th>Course</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        document.getElementById('studentForm').onsubmit = function(e) {
+            e.preventDefault();
+            let isValid = true;
+            
+            const name = document.getElementById('sName').value;
+            const age = document.getElementById('sAge').value;
+            const course = document.getElementById('sCourse').value;
+
+            // Reset errors
+            document.querySelectorAll('.val-error').forEach(el => el.style.display = 'none');
+
+            if (!name) { document.getElementById('errName').style.display = 'block'; isValid = false; }
+            if (!age || isNaN(age)) { document.getElementById('errAge').style.display = 'block'; isValid = false; }
+            if (!course) { document.getElementById('errCourse').style.display = 'block'; isValid = false; }
+
+            if (isValid) {
+                const tbody = document.querySelector('#studentTable tbody');
+                const row = tbody.insertRow();
+                
+                // Style manipulation based on age
+                if (parseInt(age) > 25) row.classList.add('senior-student');
+
+                row.innerHTML = `
+                    <td>${name}</td>
+                    <td>${age}</td>
+                    <td>${course}</td>
+                    <td>
+                        <button onclick="updateRow(this)">Update</button>
+                        <button onclick="this.parentElement.parentElement.remove()">Remove</button>
+                    </td>
+                `;
+                this.reset();
+            }
+        };
+
+        function updateRow(btn) {
+            const row = btn.parentElement.parentElement;
+            const newName = prompt("New Name:", row.cells[0].innerText);
+            if (newName) row.cells[0].innerText = newName;
+        }
+    </script>
+</body>
+</html>
